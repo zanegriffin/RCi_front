@@ -2,6 +2,7 @@ import React from 'react'
 import header from '../images/header.png'
 import '../style/Header.scss'
 import {Nav, Navbar} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Component = () => {
@@ -12,11 +13,11 @@ const Component = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="mr-auto">
-                    <Nav.Link href="/" style={{color: 'black'}}>HOME</Nav.Link>
-                    <Nav.Link href="/products" style={{color: 'black'}}>PRODUCTS</Nav.Link>
-                    <Nav.Link href="/recertification" style={{color: 'black'}}>RECERTIFICATION</Nav.Link>
-                    <Nav.Link href="/about" style={{color: 'black'}}>ABOUT US</Nav.Link>
-                    <Nav.Link href="/contact" style={{color: 'black'}}>CONTACT</Nav.Link>
+                    <Link to="/" style={{color: 'black'}}>HOME</Link>
+                    <Link to="/products" style={{color: 'black'}}>PRODUCTS</Link>
+                    <Link to="/recertification" style={{color: 'black'}}>RECERTIFICATION</Link>
+                    <Link to="/about" style={{color: 'black'}}>ABOUT US</Link>
+                    <Link to="/contact" style={{color: 'black'}}>CONTACT</Link>
                   </Nav>
                 </Navbar.Collapse>
             </Navbar>
