@@ -4,7 +4,7 @@ var contentful = require('contentful')
 
 const Component = () => {
 
-    const [blankets, setBlankets] = useState([])
+    const [fivePoints, setFivePoints] = useState([])
     const [images, setImages] = useState([])
     const [show, setShow] = useState(false);
     const [currentImage, setCurrentImage] = useState({"title": '', "file": {"url":''}})
@@ -24,13 +24,14 @@ const Component = () => {
     })
   
     useEffect(() => {
-      getBlanketsData()
+      get5Point()
       imageURL()
     }, [])
   
-    const getBlanketsData = () => {
+    //get data
+    const get5Point = () => {
         client.getEntries({
-          'content_type': 'blanketProduct'
+          'content_type': 'junior5PointProduct'
         })
         .then(function (entries) {
         // log the title for all the entries that have it
@@ -41,13 +42,14 @@ const Component = () => {
             data.push(entry.fields)
           })
           console.log(data)
-          setBlankets(data)
+          setFivePoints(data)
             }
         )
     }
 
+    //get images
     const imageURL = () => {
-        client.getEntry('5vHf3KXCTJIJWjRbApYlQd')
+        client.getEntry('5pkUov7heWmYUtOHr0pp8F')
         .then((assets) => {
         console.log(assets)
         let images = []
@@ -60,16 +62,18 @@ const Component = () => {
         })
     } 
 
-    const renderBlankets = blankets.map(blanket => {
+    //create product lists from data
+    const renderFivePoint = fivePoints.map(fivePoint => {
         return (
             <div className='product-list blanket'>
-                <p>{blanket.type}</p>
-                <p>{blanket.part}</p>
-                <p>{blanket.replacementPad}</p>
+                <p>{fivePoint.color}</p>
+                <p>{fivePoint.type}</p>
+                <p>{fivePoint.pullUpLap}</p>
             </div>
         )
     })
 
+    //create images from contentful here
     const renderImages = images.map(image => {
         return (
             <div>
@@ -84,21 +88,27 @@ const Component = () => {
     return (
         <>
             <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="1">
-                  BLANKETS & DIAPERS
+                <Accordion.Toggle as={Card.Header} eventKey="3">
+                  DRIVER RESTRAINTS
                 </Accordion.Toggle>
-                <Accordion.Collapse eventKey="1">
-                    <Card.Body>
-                        <div className='product-list blanket'>
-                            <p>TYPE</p>
-                            <p>PART</p>
-                            <p>REPLACEMENT PAD</p>
-                        </div>
-                        {renderBlankets}
-                        <div className='image-grid'>
-                            {renderImages}
-                        </div>
-                    </Card.Body>
+                <Accordion.Collapse eventKey="3">
+                    <Accordion>
+                        <Card className='sub-accordion'>
+                            <Accordion.Toggle as={Card.Header} eventKey="4">
+                            3" 5-Point WRAP-AROUND/BOLIT IN
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="4">
+                                <Card.Body>
+                                    <div className='product-list blanket'>
+                                        <p>COLOR</p>
+                                        <p>TYPE</p>
+                                        <p>PULL UP LAP</p>
+                                    </div>
+                                    {renderFivePoint}
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                    </Accordion>
                 </Accordion.Collapse>
             </Card>
               

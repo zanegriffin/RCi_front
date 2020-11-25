@@ -4,7 +4,7 @@ var contentful = require('contentful')
 
 const Component = () => {
 
-    const [blankets, setBlankets] = useState([])
+    const [nets, setNets] = useState([])
     const [images, setImages] = useState([])
     const [show, setShow] = useState(false);
     const [currentImage, setCurrentImage] = useState({"title": '', "file": {"url":''}})
@@ -24,13 +24,14 @@ const Component = () => {
     })
   
     useEffect(() => {
-      getBlanketsData()
+      getNetData()
       imageURL()
     }, [])
   
-    const getBlanketsData = () => {
+    //get data
+    const getNetData = () => {
         client.getEntries({
-          'content_type': 'blanketProduct'
+          'content_type': 'netProduct'
         })
         .then(function (entries) {
         // log the title for all the entries that have it
@@ -41,13 +42,14 @@ const Component = () => {
             data.push(entry.fields)
           })
           console.log(data)
-          setBlankets(data)
+          setNets(data)
             }
         )
     }
 
+    //get images
     const imageURL = () => {
-        client.getEntry('5vHf3KXCTJIJWjRbApYlQd')
+        client.getEntry('5pkUov7heWmYUtOHr0pp8F')
         .then((assets) => {
         console.log(assets)
         let images = []
@@ -60,16 +62,19 @@ const Component = () => {
         })
     } 
 
-    const renderBlankets = blankets.map(blanket => {
+    //create product lists from data
+    const renderNets = nets.map(net => {
         return (
-            <div className='product-list blanket'>
-                <p>{blanket.type}</p>
-                <p>{blanket.part}</p>
-                <p>{blanket.replacementPad}</p>
+            <div className='product-list window'>
+                <p>{net.net}</p>
+                <p>{net.width}</p>
+                <p>{net.height}</p>
+                <p>{net.color}</p>
             </div>
         )
     })
 
+    //create images from contentful here
     const renderImages = images.map(image => {
         return (
             <div>
@@ -84,17 +89,19 @@ const Component = () => {
     return (
         <>
             <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="1">
-                  BLANKETS & DIAPERS
+                <Accordion.Toggle as={Card.Header} eventKey="2">
+                  WINDOW NETS
                 </Accordion.Toggle>
-                <Accordion.Collapse eventKey="1">
+                <Accordion.Collapse eventKey="2">
                     <Card.Body>
-                        <div className='product-list blanket'>
-                            <p>TYPE</p>
-                            <p>PART</p>
-                            <p>REPLACEMENT PAD</p>
+                        <p>WINDOW NET INSTALLATION KIT 7651A</p>
+                        <div className='product-list window'>
+                            <p>NET</p>
+                            <p>WIDTH</p>
+                            <p>HEIGHT</p>
+                            <p>COLOR</p>
                         </div>
-                        {renderBlankets}
+                        {renderNets}
                         <div className='image-grid'>
                             {renderImages}
                         </div>

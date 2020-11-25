@@ -107,7 +107,7 @@ const Component = () => {
             </Card>
               
 
-            {/* <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
                     <Modal.Title>{currentImage.title}</Modal.Title>
               </Modal.Header>
@@ -117,7 +117,7 @@ const Component = () => {
                   Close
                 </Button>
               </Modal.Footer>
-            </Modal> */}
+            </Modal>
         </>
     )
 }
