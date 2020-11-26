@@ -5,7 +5,6 @@ import '../style/Footer.scss'
 const Component = () => {
     return(
         <div className='footer'>
-            <img src={logo}/>
             <nav>
                 <div>
                     <a>HOME</a>

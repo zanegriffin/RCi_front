@@ -19,9 +19,9 @@ function App() {
       <Switch>
         <Route exact path ='/' render={(rp) => <Home {...rp}/>} />
         <Route exact path ='/products' render={(rp) => <Products {...rp}/>} />
-        <Route exact path ='/recertification' render={(rp) => <Home {...rp}/>} />
-        <Route exact path ='/about' render={(rp) => <Home {...rp}/>} />
-        <Route exact path ='/contact' render={(rp) => <Home {...rp}/>} />
+        <Route exact path ='/recertification' render={(rp) => <Recert {...rp}/>} />
+        <Route exact path ='/about' render={(rp) => <About {...rp}/>} />
+        <Route exact path ='/contact' render={(rp) => <Contact {...rp}/>} />
       </Switch>
       <Footer></Footer>
     </div>

@@ -108,6 +108,66 @@ const Component = () => {
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
+                        <Card className='sub-accordion'>
+                            <Accordion.Toggle as={Card.Header} eventKey="4">
+                            3" 5-Point WRAP-AROUND/BOLIT IN
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="4">
+                                <Card.Body>
+                                    <div className='product-list blanket'>
+                                        <p>COLOR</p>
+                                        <p>TYPE</p>
+                                        <p>PULL UP LAP</p>
+                                    </div>
+                                    {renderFivePoint}
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                        <Card className='sub-accordion'>
+                            <Accordion.Toggle as={Card.Header} eventKey="4">
+                            3" 5-Point WRAP-AROUND/BOLIT IN
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="4">
+                                <Card.Body>
+                                    <div className='product-list blanket'>
+                                        <p>COLOR</p>
+                                        <p>TYPE</p>
+                                        <p>PULL UP LAP</p>
+                                    </div>
+                                    {renderFivePoint}
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                        <Card className='sub-accordion'>
+                            <Accordion.Toggle as={Card.Header} eventKey="4">
+                            3" 5-Point WRAP-AROUND/BOLIT IN
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="4">
+                                <Card.Body>
+                                    <div className='product-list blanket'>
+                                        <p>COLOR</p>
+                                        <p>TYPE</p>
+                                        <p>PULL UP LAP</p>
+                                    </div>
+                                    {renderFivePoint}
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                        <Card className='sub-accordion'>
+                            <Accordion.Toggle as={Card.Header} eventKey="4">
+                            3" 5-Point WRAP-AROUND/BOLIT IN
+                            </Accordion.Toggle>
+                            <Accordion.Collapse eventKey="4">
+                                <Card.Body>
+                                    <div className='product-list blanket'>
+                                        <p>COLOR</p>
+                                        <p>TYPE</p>
+                                        <p>PULL UP LAP</p>
+                                    </div>
+                                    {renderFivePoint}
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
                     </Accordion>
                 </Accordion.Collapse>
             </Card>

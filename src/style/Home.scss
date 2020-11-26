@@ -1,0 +1,35 @@
+.home {
+    padding-top: 15px;
+    h1{
+        color: yellow;
+        font-size: 24px;
+        text-align: center;
+        
+    
+        span{
+            color: white;
+        }
+    }
+    a{
+        div{
+            border: 2px solid yellow;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 40px 20px;
+            box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.8);
+
+            h1{
+                color: white;
+                font-size: 22px;
+                text-align: left;
+            }
+            p{
+                color: red;
+                margin: 0;
+                font-size: 18px;
+            }
+
+        }
+    }
+    
+}

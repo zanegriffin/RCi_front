@@ -1,0 +1,41 @@
+.about{
+    h1{
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        margin: 20px;
+    
+        span{
+            color: yellow;
+        }
+    }
+    div{
+        border-top: 4px solid yellow;
+        border-left: 2px solid yellow;
+        margin-left: 20px;
+        p{
+            color: white;
+            font-size: 16px;
+            margin: 15px;
+        }
+        span{
+            color: yellow;
+        }
+        span:nth-last-of-type(2){
+            font-weight: bolder;
+        }
+    }
+    div:nth-of-type(2){
+        border: 2px solid yellow;
+        margin: 20px;
+        border-radius: 15px;
+        padding: 20px;
+        h1{
+            text-align: left;
+            margin: 0;
+        }
+        p{
+            margin: 0;
+        }
+    }
+}
