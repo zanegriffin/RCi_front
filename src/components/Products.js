@@ -11,14 +11,14 @@ const Component = () => {
     
 
     return(
-        <>
+        <div className='products'>
             <Accordion>
                 <Seats />
                 <Blankets />
                 <WindowNet />
                 <DriverRestraints />
             </Accordion>
-        </>
+        </div>
     )
 }
 

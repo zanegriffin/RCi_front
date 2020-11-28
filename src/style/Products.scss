@@ -1,4 +1,7 @@
-   
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Open+Sans:wght@400;700&display=swap');
+.products{
+
+  
 .card{
     background-color: black;
     
@@ -77,16 +80,17 @@
     }
 }
 
+.sub-accordion{
+    margin: 10px;
+    border: 2px solid yellow;
+    padding-bottom: 5px;
+}
+}
+
 .modal-content{
     
     img{
         width: 40%;
         margin: 15px auto;
     }
-}
-
-.sub-accordion{
-    margin: 10px;
-    border: 2px solid yellow;
-    padding-bottom: 5px;
 }

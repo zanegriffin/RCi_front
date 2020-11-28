@@ -13,6 +13,7 @@ const Component = () => {
                 <h1>2019 WINNER</h1>
                 <p>BEST NEW PERFORMANCE</p>
                 <p>EFI IN-TANK PUMP READY ALUMINUM FUEL CELL</p>
+                <p>TIG-WELDED, LIGHTWEIGHT, AIRCRAFT ALUMINUM ALLOY, 12 BOLT FLUSH MOUNT LID ASSEMBLY WITH UNIVERSAL FIT.</p>
             </div>
         </div>
     )
