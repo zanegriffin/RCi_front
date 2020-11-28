@@ -3,6 +3,16 @@
 // font-family: 'Open Sans', sans-serif;
 .body {
     background-color:black;
-
+    height: 100%;
     
+}
+
+html, body, #root {
+ height: 100%;
+ position: relative;
+}
+
+.App{
+    min-height: 100vh;
+    position: relative;
 }

@@ -84,7 +84,9 @@ const Component = () => {
                     </Accordion.Collapse>
                 </Card>
             </Accordion>
+            
         </div>
+
     )
 }
 

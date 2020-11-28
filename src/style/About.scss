@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Open+Sans:wght@400;700&display=swap');
 .about{
+    padding-bottom: 130px;
     h1{
         color: white;
         font-size: 24px;
         text-align: center;
         margin: 20px;
+        font-family: 'Montserrat', sans-serif;
     
         span{
             color: yellow;
+            font-weight: bold;
         }
     }
     div{
@@ -18,6 +21,7 @@
             color: white;
             font-size: 16px;
             margin: 15px;
+            font-family: 'Open Sans', sans-serif;
         }
         span{
             color: yellow;
@@ -37,6 +41,7 @@
         }
         p{
             margin: 0;
+            
         }
     }
 }

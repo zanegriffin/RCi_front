@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Open+Sans:wght@400;700&display=swap');
 .home {
     padding-top: 15px;
+    padding-bottom: 130px;
     h1{
         color: yellow;
-        font-size: 24px;
+        font-size: 22px;
         text-align: center;
-        
-    
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
         span{
             color: white;
+            font-weight: 400;
         }
     }
     a{
@@ -23,11 +25,13 @@
                 color: white;
                 font-size: 22px;
                 text-align: left;
+                font-weight: 400;
             }
             p{
                 color: red;
                 margin: 0;
                 font-size: 18px;
+                font-family: 'Open Sans', sans-serif;
             }
 
         }

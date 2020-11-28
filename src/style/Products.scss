@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Open+Sans:wght@400;700&display=swap');
 .products{
-
+    padding-bottom: 130px;
   
 .card{
     background-color: black;
@@ -88,9 +88,9 @@
 }
 
 .modal-content{
-    
+    height: 100%;
     img{
-        width: 40%;
+        width: 90%;
         margin: 15px auto;
     }
 }
