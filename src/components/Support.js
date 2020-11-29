@@ -163,7 +163,7 @@ const Component = () => {
                 </Card>
             </Accordion>
             <h3>NEED FURTHER ASSISTANCE?</h3>
-            <Link to='/contact'><button>CONTACT US</button></Link>
+            <a href='/contact'><button>CONTACT US</button></a>
         </div>
     )
 }

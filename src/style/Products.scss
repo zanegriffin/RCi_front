@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Open+Sans:wght@400;700&display=swap');
 .products{
     padding-bottom: 130px;
+    h1{
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        margin: 20px;
+        a{
+            color: yellow;
+        }
+    }
   
 // .card{
 //     background-color: black;
@@ -29,6 +40,10 @@
         background-color: yellow;
         font-weight: bold;
         font-family: 'Montserrat', sans-serif;
+
+        @media (min-width: 768px){
+            font-size: 28px;
+        }
     }
 
     .card-body{
@@ -50,6 +65,9 @@
         font-size: 14px;
         color: white;
         width: 100%;
+        @media (min-width: 768px){
+            font-size: 24px;
+        }
     }
 }
 
@@ -73,6 +91,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    @media (min-width: 768px){
+        font-size: 24px;
+        grid-template-columns: repeat(6, 1fr);
+    }
     .image-container{
         width: 80px;
         height: 100px;

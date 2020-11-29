@@ -1,5 +1,6 @@
 import React from 'react'
 import '../style/About.scss'
+import Connect from '../images/connect.png'
 
 const Component = () => {
     return(
@@ -10,10 +11,13 @@ const Component = () => {
                 <p>RCI's products are designed for racers in an <span>assortment</span> of different styles, sizes, colors, and performance levels: offering an ultimate level of <span>safety protection</span> in all types of racing.</p>
             </div>
             <div>
-                <h1>2019 WINNER</h1>
-                <p>BEST NEW PERFORMANCE</p>
-                <p>EFI IN-TANK PUMP READY ALUMINUM FUEL CELL</p>
-                <p>TIG-WELDED, LIGHTWEIGHT, AIRCRAFT ALUMINUM ALLOY, 12 BOLT FLUSH MOUNT LID ASSEMBLY WITH UNIVERSAL FIT.</p>
+                <img src={Connect}></img>
+                <div>
+                    <h1>2019 WINNER</h1>
+                    <p>BEST NEW PERFORMANCE</p>
+                    <p>EFI IN-TANK PUMP READY ALUMINUM FUEL CELL</p>
+                    <p>TIG-WELDED, LIGHTWEIGHT, AIRCRAFT ALUMINUM ALLOY, 12 BOLT FLUSH MOUNT LID ASSEMBLY WITH UNIVERSAL FIT.</p>
+                </div>
             </div>
         </div>
     )

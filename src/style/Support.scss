@@ -7,6 +7,9 @@
         display: block;
         width: 90%;
         margin: 25px auto;
+        @media (min-width: 768px){
+            width: 400px;
+        }
     }
 
     h1{
@@ -19,6 +22,9 @@
     .card{
         margin: 20px;
         border-radius: 15px;
+        @media (min-width: 768px){
+            font-size: 28px;
+        }
         .card-header{
             background-color: yellow;
             font-weight: bold;

@@ -11,6 +11,7 @@ const Component = () => {
                 <img src={map}></img>
                 <h3><span>EMAIL:</span> sales@rciracing.com</h3>
                 <h3><span>PHONE:</span> <a href='tel:+19039391908'>(903)-939-1908</a></h3>
+                <br/>
                 <div className='div'>
                     <div>
                         <h3>PHYSICAL LOCATION</h3>
@@ -26,7 +27,8 @@ const Component = () => {
                     </div>
                 </div>
             </div>
-            <p>HOURS:</p>
+            <br/>
+            <p>HOURS</p>
             <div className='hours'>
                 <ul>
                     <li>MONDAY</li>
