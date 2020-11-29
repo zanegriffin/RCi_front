@@ -12,6 +12,9 @@
         @media (min-width: 768px){
             width: 45%;
         }
+        @media (min-width: 1024px){
+            width: 30%;
+        }
     }
 
     .navbar{
@@ -23,7 +26,7 @@
         
         a{
             @media (min-width: 992px){
-                font-size: 30px;
+                font-size: 24px;
             }
         }
         

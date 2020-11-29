@@ -35,7 +35,11 @@
 
 .card{
     margin: 20px;
-    border-radius: 15px;
+    @media (min-width: 1024px){
+        max-width: 1000px;
+        display: block;
+        margin: 0 auto;
+    }
     .card-header{
         background-color: yellow;
         font-weight: bold;

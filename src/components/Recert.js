@@ -1,10 +1,13 @@
 import React from 'react'
 import {Accordion, Card} from 'react-bootstrap'
 import '../style/Recert.scss'
+import Fade from 'react-reveal/Fade';
+import Bounce from 'react-reveal/Bounce';
 
 const Component = () => {
     return(
         <div className='recert'>
+            <Bounce>
             <h1>NEED TO BE RECERTIFIED?</h1>
             <h1>NO PROBLEM.</h1>
             <p>WE HAVE <span>CERTIFICATION OPTIONS</span> FOR SEAT BELTS, ENGINE DIAPERS AND TRANSMISSION BLANKETS.</p>
@@ -84,7 +87,7 @@ const Component = () => {
                     </Accordion.Collapse>
                 </Card>
             </Accordion>
-            
+            </Bounce>
         </div>
 
     )

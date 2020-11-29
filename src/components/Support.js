@@ -8,12 +8,15 @@ import driverRestraints from '../images/driverrestraints2.jpg'
 import sendingUnit from '../images/sendingunit.jpg'
 import blanket from '../images/techblanket.jpg'
 import '../style/Support.scss'
+import Zoom from 'react-reveal/Zoom';
 
 const Component = () => {
     return (
         <div className='support'>
+            <Zoom left>
             <img src={support_logo} alt='Suppport Center'/>
             <h1>WHAT DO YOU NEED HELP WITH TODAY?</h1>
+            
             <Accordion>
                 <Card>
                     <Accordion.Toggle as={Card.Header}  eventKey="0">
@@ -162,8 +165,10 @@ const Component = () => {
                     </Accordion.Collapse>
                 </Card>
             </Accordion>
+            
             <h3>NEED FURTHER ASSISTANCE?</h3>
             <a href='/contact'><button>CONTACT US</button></a>
+            </Zoom>
         </div>
     )
 }
