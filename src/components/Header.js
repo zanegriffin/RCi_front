@@ -15,6 +15,7 @@ const Component = () => {
                   <Nav className="mr-auto">
                     <Link to="/" style={{color: 'black'}}>HOME</Link>
                     <Link to="/products" style={{color: 'black'}}>PRODUCTS</Link>
+                    <Link to="/support" style={{color: 'black'}}>SUPPORT</Link>
                     <Link to="/recertification" style={{color: 'black'}}>RECERTIFICATION</Link>
                     <Link to="/about" style={{color: 'black'}}>ABOUT US</Link>
                     <Link to="/contact" style={{color: 'black'}}>CONTACT</Link>

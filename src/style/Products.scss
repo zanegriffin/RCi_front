@@ -2,23 +2,41 @@
 .products{
     padding-bottom: 130px;
   
+// .card{
+//     background-color: black;
+    
+//     .card-header{
+//         color: white;
+//         font-family: 'Open Sans', sans-serif;
+//         font-weight: 700;
+//         font-size: 20px;
+//         border-bottom: 2px solid red;
+//     }
+    
+// }
+// .card-body{
+//     p{
+//         color: yellow;
+//         font-family: 'Open Sans', sans-serif;
+//         font-weight: 700;
+//     }
+// }
+
 .card{
-    background-color: black;
-    
+    margin: 20px;
+    border-radius: 15px;
     .card-header{
-        color: white;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 700;
-        font-size: 20px;
-        border-bottom: 2px solid red;
+        background-color: yellow;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
     }
-    
-}
-.card-body{
-    p{
-        color: yellow;
+
+    .card-body{
         font-family: 'Open Sans', sans-serif;
-        font-weight: 700;
+        background-color: black;
+        color: white;
+        
+        
     }
 }
 
@@ -28,7 +46,7 @@
     
     p{
         font-family: 'Open Sans', sans-serif;
-        font-weight: 700;
+        padding: 2px;
         font-size: 14px;
         color: white;
         width: 100%;
