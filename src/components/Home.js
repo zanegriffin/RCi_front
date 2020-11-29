@@ -16,7 +16,7 @@ const Component = () => {
             <h1>DRIVEN <span>TO</span> EXCELLENCE</h1>
             </Fade>
             <Fade left >
-                <a href='/products' id='one' >
+                <Link to='/products' id='one' >
                     <div className='links'>
                         <FontAwesomeIcon icon={faClipboardList} size='6x' style={{color: 'grey'}}></FontAwesomeIcon>
                         <div>
@@ -24,10 +24,10 @@ const Component = () => {
                             <p>CHECK OUT OUR ONLINE CATALOG</p>
                         </div>
                     </div>
-                </a>
+                </Link>
             </Fade>
             <Fade right cascade>
-                <a href='/recertification' id='two' >
+                <Link to='/recertification' id='two' >
                 <div className='links'>
                     <FontAwesomeIcon icon={faFileAlt} size='6x' style={{color: 'grey'}}></FontAwesomeIcon>
                     <div>
@@ -35,8 +35,8 @@ const Component = () => {
                         <p>CHECK OUT OUR RECERTIFICATION OPTIONS </p>
                     </div>
                 </div>
-                </a>
-                <a href='/support' id='three' >
+                </Link>
+                <Link to='/support' id='three' >
                 <div className='links'>
                 <FontAwesomeIcon icon={faQuestion} size='6x' style={{color: 'grey'}}></FontAwesomeIcon>
                     <div>
@@ -44,10 +44,10 @@ const Component = () => {
                         <p>HEAD OVER TO OUR SUPPORT PAGE</p>
                     </div>
                 </div>
-                </a>
+                </Link>
             </Fade>
             <Fade bottom>
-                <a href='/about' id='four' >
+                <Link to='/about' id='four' >
                 <div className='links'>
                     <img src={Connect}></img>
                     <div>
@@ -56,7 +56,7 @@ const Component = () => {
                         <p>EFI IN-TANK PUMP READY ALUMINUM FUEL CELL</p>
                     </div>
                 </div>
-                </a>
+                </Link>
             </Fade>
         </div>
     )
