@@ -16,7 +16,7 @@ const Component = () => {
             <h1>DRIVEN <span>TO</span> EXCELLENCE</h1>
             </Fade>
             <Fade left >
-                <a href='/products' id='one' >
+                <a href='https://rciracing.netlify.app/products' id='one' >
                     <div className='links'>
                         <FontAwesomeIcon icon={faClipboardList} size='6x' style={{color: 'grey'}}></FontAwesomeIcon>
                         <div>
@@ -27,7 +27,7 @@ const Component = () => {
                 </a>
             </Fade>
             <Fade right cascade>
-                <a href='/recertification' id='two' >
+                <a href='https://rciracing.netlify.app/recertification' id='two' >
                 <div className='links'>
                     <FontAwesomeIcon icon={faFileAlt} size='6x' style={{color: 'grey'}}></FontAwesomeIcon>
                     <div>
@@ -36,7 +36,7 @@ const Component = () => {
                     </div>
                 </div>
                 </a>
-                <a href='/support' id='three' >
+                <a href='https://rciracing.netlify.app/support' id='three' >
                 <div className='links'>
                 <FontAwesomeIcon icon={faQuestion} size='6x' style={{color: 'grey'}}></FontAwesomeIcon>
                     <div>
@@ -47,7 +47,7 @@ const Component = () => {
                 </a>
             </Fade>
             <Fade bottom>
-                <a href='/about' id='four' >
+                <a href='https://rciracing.netlify.app/about' id='four' >
                 <div className='links'>
                     <img src={Connect}></img>
                     <div>
