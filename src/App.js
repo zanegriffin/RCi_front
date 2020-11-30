@@ -9,14 +9,16 @@ import Products from './components/Products'
 import Recert from './components/Recert'
 import Footer from './components/Footer'
 import Support from './components/Support'
-
+import Bounce from 'react-reveal/Bounce';
 
 function App() {
   
 
   return (
     <div className="App">
-      <Header ></Header>
+      <Bounce right>
+        <Header ></Header>
+      </Bounce>
       <Switch>
         <Route exact path ='/' render={(rp) => <Home {...rp}/>} />
         <Route exact path ='/products' render={(rp) => <Products {...rp}/>} />

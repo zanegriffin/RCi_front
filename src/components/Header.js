@@ -5,6 +5,7 @@ import {Nav, Navbar} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 const Component = () => {
     return(
         <div className='header'>

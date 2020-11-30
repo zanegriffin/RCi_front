@@ -5,7 +5,9 @@ var contentful = require('contentful')
 const Component = () => {
 
     const [fivePoints, setFivePoints] = useState([])
-    const [images, setImages] = useState([])
+    const [offRoad, setOffRoad] = useState([])
+    const [boltIn, setBoltIn] = useState([])
+    const [fivePointImages, setFivePointImages] = useState([])
     const [show, setShow] = useState(false);
     const [currentImage, setCurrentImage] = useState({"title": '', "file": {"url":''}})
 
@@ -25,9 +27,11 @@ const Component = () => {
   
     useEffect(() => {
       get5Point()
-      imageURL()
+      getOffRoad()
+      getBoltIn()
+      imageFivePoint()
     }, [])
-  
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //get data
     const get5Point = () => {
         client.getEntries({
@@ -46,9 +50,43 @@ const Component = () => {
             }
         )
     }
-
+    const getOffRoad = () => {
+        client.getEntries({
+          'content_type': 'offRoadBeltProduct'
+        })
+        .then(function (entries) {
+        // log the title for all the entries that have it
+          console.log(entries.items)
+          let data = []
+          entries.items.forEach(function (entry) {
+            console.log(entry.fields)
+            data.push(entry.fields)
+          })
+          console.log(data)
+          setOffRoad(data)
+            }
+        )
+    }
+    const getBoltIn = () => {
+        client.getEntries({
+          'content_type': 'restraintProduct'
+        })
+        .then(function (entries) {
+        // log the title for all the entries that have it
+          console.log(entries.items)
+          let data = []
+          entries.items.forEach(function (entry) {
+            console.log(entry.fields)
+            data.push(entry.fields)
+          })
+          console.log(data)
+          setBoltIn(data)
+            }
+        )
+    }
+////////////////////////////////////////////////////////////////////////////////////////////////////////
     //get images
-    const imageURL = () => {
+    const imageFivePoint = () => {
         client.getEntry('5pkUov7heWmYUtOHr0pp8F')
         .then((assets) => {
         console.log(assets)
@@ -58,10 +96,10 @@ const Component = () => {
             images.push(asset.fields)
           })
           console.log(images)
-          setImages(images)
+          setFivePointImages(images)
         })
     } 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
     //create product lists from data
     const renderFivePoint = fivePoints.map(fivePoint => {
         return (
@@ -73,8 +111,28 @@ const Component = () => {
         )
     })
 
-    //create images from contentful here
-    const renderImages = images.map(image => {
+    const renderOffRoad = offRoad.map(belt => {
+        return (
+            <div className='product-list blanket'>
+                <p>{belt.color}</p>
+                <p>{belt.part}</p>
+            </div>
+        )
+    })
+
+    const renderBoltIn = boltIn.map(belt => {
+        return (
+            <div className='product-list window'>
+                <p>{belt.color}</p>
+                <p>{belt.type}</p>
+                <p>{belt.pullDownLap}</p>
+                <p>{belt.pullUpLap}</p>
+            </div>
+        )
+    })
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+    //create fivePointImages from contentful here
+    const renderImages = fivePointImages.map(image => {
         return (
             <div>
             <div className='image-container' onClick={() => handleShow(image)}>
@@ -95,7 +153,7 @@ const Component = () => {
                     <Accordion>
                         <Card className='sub-accordion'>
                             <Accordion.Toggle as={Card.Header} eventKey="4">
-                            3" 5-Point WRAP-AROUND/BOLIT IN
+                            JUNIOR 5-POINT
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="4">
                                 <Card.Body>
@@ -109,65 +167,37 @@ const Component = () => {
                             </Accordion.Collapse>
                         </Card>
                         <Card className='sub-accordion'>
-                            <Accordion.Toggle as={Card.Header} eventKey="4">
-                            3" 5-Point WRAP-AROUND/BOLIT IN
+                            <Accordion.Toggle as={Card.Header} eventKey="5">
+                            NON SFI Off-Road Comp Belts
                             </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="4">
+                            <Accordion.Collapse eventKey="5">
                                 <Card.Body>
                                     <div className='product-list blanket'>
                                         <p>COLOR</p>
-                                        <p>TYPE</p>
-                                        <p>PULL UP LAP</p>
+                                        <p>PART</p>
+                                        
                                     </div>
-                                    {renderFivePoint}
+                                    {renderOffRoad}
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
                         <Card className='sub-accordion'>
-                            <Accordion.Toggle as={Card.Header} eventKey="4">
-                            3" 5-Point WRAP-AROUND/BOLIT IN
+                            <Accordion.Toggle as={Card.Header} eventKey="6">
+                            3" 5-POINT WRAP-AROUND/BOLT IN
                             </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="4">
+                            <Accordion.Collapse eventKey="6">
                                 <Card.Body>
-                                    <div className='product-list blanket'>
+                                    <div className='product-list window'>
                                         <p>COLOR</p>
                                         <p>TYPE</p>
+                                        <p>PULL DOWN LAP</p>
                                         <p>PULL UP LAP</p>
                                     </div>
-                                    {renderFivePoint}
+                                    {renderBoltIn}
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
-                        <Card className='sub-accordion'>
-                            <Accordion.Toggle as={Card.Header} eventKey="4">
-                            3" 5-Point WRAP-AROUND/BOLIT IN
-                            </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="4">
-                                <Card.Body>
-                                    <div className='product-list blanket'>
-                                        <p>COLOR</p>
-                                        <p>TYPE</p>
-                                        <p>PULL UP LAP</p>
-                                    </div>
-                                    {renderFivePoint}
-                                </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                        <Card className='sub-accordion'>
-                            <Accordion.Toggle as={Card.Header} eventKey="4">
-                            3" 5-Point WRAP-AROUND/BOLIT IN
-                            </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="4">
-                                <Card.Body>
-                                    <div className='product-list blanket'>
-                                        <p>COLOR</p>
-                                        <p>TYPE</p>
-                                        <p>PULL UP LAP</p>
-                                    </div>
-                                    {renderFivePoint}
-                                </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
+                        
                     </Accordion>
                 </Accordion.Collapse>
             </Card>
